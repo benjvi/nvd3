@@ -88,7 +88,7 @@ nv.models.scatterChart = function() {
       if( tooltipY != null )
           nv.tooltip.show([leftY, topY], tooltipY(e.series.key, xVal, yVal, e, chart), 'e', 1, offsetElement, 'y-nvtooltip');
       if( tooltip != null )
-          nv.tooltip.show([left, top], tooltip(e.series.key, xVal, yVal, e, chart), e.value < 0 ? 'n' : 's', null, offsetElement);
+          nv.tooltip.show([left, top], tooltip(e.series.values[e.pointIndex].description, xVal, yVal, e, chart), e.value < 0 ? 'n' : 's', null, offsetElement);
   };
 
   var controlsData = [
